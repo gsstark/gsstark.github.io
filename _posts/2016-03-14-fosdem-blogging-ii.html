@@ -1,0 +1,13 @@
+---
+layout: post
+title: FOSDEM Blogging II
+date: '2016-03-14T11:41:00.000Z'
+author: zxzkz
+tags: 
+modified_time: '2016-03-14T11:41:57.346Z'
+thumbnail: https://1.bp.blogspot.com/-iifQD_RK4og/VuWaFkkXOJI/AAAAAAABjPs/u04qAGrdoaYffB9UV2S8Av-DXZ_IPPfUg/s72-c/12628609_10154630301158902_2438978300883687786_o.jpg
+blogger_id: tag:blogger.com,1999:blog-5512581117645116885.post-6661063785136114694
+blogger_orig_url: http://datafool.blogspot.com/2016/03/fosdem-blogging-ii.html
+---
+
+Well to continue my octennial series on PostgreSQL at FOSDEM...<br /><div><br /></div><div>This year I presented for the first time at FOSDEM. Not in the PostgreSQL room -- which I think can be a bit like "preaching to the choir" -- but in two <b>other</b> rooms. I hoped to bring a bit of exposure to Postgres outside the usual crowd.</div><div><br /></div><div>I presented the crowd favorite PostgreSQL on a VAX in the main lightning talk hall Slonik came to visit to help out:</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-iifQD_RK4og/VuWaFkkXOJI/AAAAAAABjPs/u04qAGrdoaYffB9UV2S8Av-DXZ_IPPfUg/s1600/12628609_10154630301158902_2438978300883687786_o.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="240" src="https://1.bp.blogspot.com/-iifQD_RK4og/VuWaFkkXOJI/AAAAAAABjPs/u04qAGrdoaYffB9UV2S8Av-DXZ_IPPfUg/s320/12628609_10154630301158902_2438978300883687786_o.jpg" width="320" /></a></div><div><br /></div><div>Also one of the audience members turned out to have a real VAX machine and be interested in repeating the experiments on real hardware. That's the kind of connection that is the strength of conferences like FOSDEM that aren't narrowly targeted.</div><div><br /></div><div>Secondly I presented my Postgres fuzzer extension in the LLVM room. This is a Postgres module using the <a href="http://llvm.org/docs/LibFuzzer.html">Libfuzzer</a>&nbsp;from LLVM to fuzz Postgres functions. LIbfuzzer is a lot like AFL&nbsp;but runs entirely in-process so it's much faster and it's easier to integrate into a client-server architecture like Postgres.&nbsp;</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen="true" frameborder="0" height="200" mozallowfullscreen="true" src="https://docs.google.com/presentation/d/12Dd9Bhcugkdi2w0ye4T1fy9ccjconJEz9cNthdeyH7k/embed?start=true&amp;loop=true&amp;delayms=1000" webkitallowfullscreen="true" width="320"></iframe></div><div><br />The main developer for Libfuzzer is Kostya Serebryany and I regret that I didn't remember his name during the talk when I tried to credit him.</div>

@@ -1,0 +1,12 @@
+---
+layout: post
+title: FOSDEM Blogging
+date: '2008-02-26T08:06:00.000Z'
+author: zxzkz
+tags: 
+modified_time: '2016-03-13T16:19:45.843Z'
+blogger_id: tag:blogger.com,1999:blog-5512581117645116885.post-7988583868604286829
+blogger_orig_url: http://datafool.blogspot.com/2008/02/fosdem-blogging.html
+---
+
+I haven't done much work-related blogging but here goes:<br /><br />Various blogs seem to consider <a href="http://www.fosdem.org/2008/">FOSDEM</a> to be a great success. Here's another. It brought together developers from different places and different fields in a way that can make a real difference.<br /><br />I met up with Tatsuo Ishii-san from Japan to discuss some Postgres development that we're both looking at, recursive queries. I think we made more progress together than either of us has been able to make alone.<br /><br />I also found a great tool called <a href="http://live.gnome.org/iogrind">IOGrind</a> which is a valgrind module to analyze the I/O pattern across a disk. It will let us get a much better idea how well file systems are laying out our files and how much seeking is actually going on for apparently-sequential i/o.<br /><br />Lastly Heikki was able to meet with BSD developers and discuss the kinds of APIs Postgres needs to be able to the timing of filesystem writes. fsync() is too coarse an API for our needs and leads to i/o spikes and unnecessarily high latency.<br /><br />I've come away with new-found respect for events like FOSDEM or <a href="http://barcamp.org/">Barcamp</a> which can bring together developers from disparate but related fields. In the future I would consider checking on the schedules of developers for features we really need and seeking out events where the opportunity to work with them may come up.<br /><br />One example is Postgres's needs for i18n. <a href="http://www.opengroup.org/onlinepubs/007908799/xsh/strcoll.html">strcoll()</a>is too awkward for Postgres to handle per-column collations as it requires switching the global locale for every call. On glibc that would be tolerable -- though not great -- but on most OSes it would be unusably slow. Glibc has an internal&nbsp;<a href="http://archives.postgresql.org/pgsql-hackers/2004-12/msg00785.php">strcol_l()</a> but it's neither standard, nor documented. Perhaps if we sit down with the right people we could get a standard interface which meets our needs.
